@@ -1,0 +1,87 @@
+// main: ../style.less
+
+
+
+
+
+/* === Colors ===  */
+@primary: #DA353B;
+@text: #fff;
+@bg: #E5E5E5;
+@bg-dark: rgba(0, 0, 0, 0.7);
+
+
+
+/* === Fonts ===  */
+@uLight: 100;
+@light: 300;
+@medium: 500;
+@black: 700;
+
+
+
+/* === Mixins ===  */
+
+.btn(@bg) {
+    text-decoration: none;
+    padding: 8px 15px;
+
+    font-size: 14px;
+    line-height: 26px;
+
+    display: inline-block;
+    
+    color: @text;
+    background-color: @bg;
+}
+
+
+.square(@width, @height, @left, @top) {
+    content: "";
+    position: absolute;
+    width: @width;
+    height: @height;
+
+    
+
+    left: @left;
+    top: @top;
+
+    background-color: transparent;
+    border: 6px @primary solid;
+}
+
+
+.header(@fz, @fw, @ml) {
+    font-size: @fz;
+    font-weight: @fw;
+    text-transform: uppercase;
+    margin-left: @ml;
+
+    span {
+        color: @primary;
+    }
+}
+
+.img-mobile() {
+    flex-basis: unset;
+    width: 141.3%;
+    height: 260px;
+    overflow: hidden;
+}
+
+
+.program-mobile() {
+    background-color: @bg-dark;
+    padding: 0 0 28px 0;
+    
+}
+
+
+/* === Breakpoints ===  */
+
+@mobile: ~"(max-width: 375px)";
+@1199: ~"(max-width: 1199px)";
+@991: ~"(max-width: 991px)";  
+@767: ~"(max-width: 767px)";
+@575: ~"(max-width: 575px)";

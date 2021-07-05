@@ -1,0 +1,99 @@
+// main: ../style.less
+
+.photos {
+    position: relative;
+    padding: 90px 0 170px 0;
+
+    @media @991 {
+
+        padding-bottom: 100px;
+        
+    }
+
+    @media @575 {
+        padding-top: 35px;
+        padding-bottom: 40px;
+    }
+
+    &:before {
+        .square(220px, 220px, 6.25%, -60px);
+
+        @media @1199 {
+            .square(220px, 220px, 5.9%, -66px);
+        }
+
+        // @media @767 {
+        //     .square(143px, 143px, 41%, -18px);
+        //     transform: translateX(-50%);
+        // }
+
+        @media @575 {
+            .square(143px, 143px, 50%, -18px);
+            border: 3px solid @primary;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__title {
+        .header(48px, @light, 30px);
+
+        @media @575 {
+            .header(44px, @light, 28px);
+            display: inline-block;
+            width: 189px;
+            font-size: 44px;
+            line-height: 40px;
+
+            display: none;
+            visibility: hidden;
+
+            overflow-wrap: break-word;
+
+            
+        }
+        
+        &-hidden {
+            display: none;
+            visibility: hidden;
+
+            @media @575 {
+                display: inline-block;
+                visibility: visible;
+            }
+        }
+
+    }
+
+    &__slider {
+        margin-top: 73px;
+    }
+}
+
+.photos-slider {
+    position: relative;
+
+    @media @575 {
+        margin-top: 31px;
+    }
+
+  
+    &__slide {
+        max-width: 380px;
+        margin-right: 20px;
+
+        @media @575 {
+            max-width: 245px;
+        }
+
+        img {
+            object-fit: cover;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .slick-arrow {
+        bottom: -83px;
+    }
+
+}

@@ -1,0 +1,168 @@
+// main: ../style.less
+
+.experts {
+    padding-bottom: 90px;
+    background-color: @bg;
+
+    @media @575 {
+        padding-bottom: 38px;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        @media @991 {
+            align-items: flex-start;
+        }
+      
+        @media @991 {
+            flex-direction: column;
+        }
+
+      
+    }
+
+    &__column {
+        flex-grow: 0;
+        flex-shrink: 1;
+
+        &:nth-of-type(1) {
+            flex-basis: 57.7%;
+
+            @media @991 {
+                width: 100%;
+            }
+        }
+
+        &:nth-of-type(2) {
+           
+            padding-left: 60px;
+
+            @media @991 {
+                
+                padding: 0;
+                align-self: flex-end;
+            }
+           
+        }
+    }
+
+    &__pic {
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 56.57%;
+
+
+
+        @media @991 {
+           width: 80%;
+           padding-bottom: 44%;
+            
+        }
+        
+       
+
+        @media @575 {
+            
+            width: 124%;
+            padding-bottom: 69%;
+
+            
+        }
+
+
+        img {
+           position: absolute;
+           object-fit: cover;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+
+           
+
+            @media @575 {
+               
+                transform: translateX(-24%);
+            }
+
+        }
+    }
+}
+
+.experts-text {
+    max-width: 375px;
+
+    @media @991 {
+        margin-top: 30px;
+        padding-right: 60px;
+        max-width: 550px;
+    }
+
+
+    @media @575 {
+        position: relative;
+        padding-left: 28px;
+        margin-top: 94px;
+    }
+
+    &__title {
+        font-size: 36px;
+        line-height: 40px;
+        text-transform: uppercase;
+        font-weight: @light;
+
+       
+
+        span:not(.white){
+            color: @primary;
+
+            
+        }
+
+
+        span.white {
+            @media @575 {
+                color: @text;
+            }
+        }
+
+        @media @575 {
+            width: 63.2%;
+            position: absolute;
+            top: -144%;
+            
+        }
+    }
+
+    &__subtitle {
+        margin-top: 20px;
+
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: @light;
+
+
+      
+
+        @media @575 {
+            margin: 0;
+        }
+    }
+
+    &__call {
+        margin-top: 14px;
+
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: @light;
+
+        color: @primary;
+        
+        @media @575 {
+            margin-top: 8px;
+        }
+    }
+
+
+}

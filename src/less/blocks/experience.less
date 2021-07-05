@@ -1,0 +1,80 @@
+// main: ../style.less
+
+.experience {
+    position: relative;
+    background-color: @bg;
+    padding: 84px 0 80px 0;
+
+
+    @media @767 {
+        padding: 40px 31px 34px 31px;
+    }
+
+    @media @575 {
+        padding: 35px 27px 30px 27px;
+    }
+
+
+    &:before {
+        .square(220px, 220px, 6.25%, -66px);
+
+        @media @1199 {
+            .square(220px, 220px, 5.9%, -66px);
+        }
+
+        // @media @767 {
+        //     .square(143px, 143px, 41%, -18px);
+        //     transform: translateX(-50%);
+        // }
+
+        @media @575 {
+            .square(143px, 143px, 50%, -18px);
+            border: 3px solid @primary;
+            transform: translateX(-50%);
+        }
+    }
+
+    .container {
+        @media @1199 {
+            width: unset;
+        }
+   
+    }
+    &__title {
+       .header(48px, @light, 30px);
+
+       @media @767 {
+        .header(44px, @light, 0px);
+       }
+    }
+
+
+    &__subtitle {
+
+        margin-left: 30px;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: @light;
+
+        max-width: 565px;
+        margin-top: 71px;
+
+        @media @767 {
+            width: 80%;
+            margin: 50px 0 0 0;
+            font-size: 18px;
+            line-height: 27px;
+        }
+
+        @media @575 {
+            width: 100%;
+            margin: 40px 0 0 0;
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+   
+    
+
+    
+}

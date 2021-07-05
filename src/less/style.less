@@ -1,0 +1,41 @@
+// out: ../../dist/css/style.min.css, compress: true
+
+@import "./libs/fonts.less";
+@import "./vars/vars.less";
+@import "./blocks/banner.less";
+@import "./blocks/experience.less";
+@import "./blocks/experts.less";
+@import "./blocks/earn.less";
+@import "./blocks/speakers.less";
+@import "./blocks/program.less";
+@import "./blocks/photos.less";
+@import "./libs/sliders.less";
+@import "./blocks/participate.less";
+@import "./blocks/footer.less";
+
+
+* {
+    font-family: "Helvetica";
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    // max-width: 1440px;
+    // margin: 0 auto;
+
+    overflow: hidden;
+}
+
+.container {
+    width: 1145px;
+    margin: 0 auto;
+    
+    @media @mobile {
+        width: 100%;
+    }
+}
